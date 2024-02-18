@@ -1,0 +1,83 @@
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Nanum+Pen+Script&display=swap');
+
+
+/* 부모요소의 옵션 설정*/
+html, body, .stage, .ring, .img {
+  width:100%;
+  height: 100%;
+  transform-style: preserve-3d; /* 3D 변환을 유지 */
+  user-select:none; /* 사용자가 텍스트를 선택 여부*/
+}
+
+a{
+  text-decoration: none;
+}
+/* 디폴트값 설정 */
+html, body, .stage {
+  overflow:hidden;
+  background:#f6f5ef;
+}
+/* position : relative 안할 시 최고 부모인 document인가 기준잡음 */
+div, svg {
+  position: absolute;
+}
+
+/* 본문 영역*/
+.container {
+  perspective: 1000px;
+  width: 500px;
+  height: 300px;  
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+/* 글자 애니메이션*/
+/* 상단 위치 */
+.stage > .birds1, .stage > .birds2{
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  font-size: 45px;
+  top: 18%;
+}
+/* 상단 왼쪽 위치 */
+.stage > .birds1 {
+  left: 39%;
+}
+
+/*상단 오른쪽 위치*/
+.stage > .birds2 {
+  left: 49%;
+}
+/*하단 위치*/
+.stage > .birds3, .stage > .birds4{
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  font-size: 45px;
+  bottom: 23%;
+}
+/* 하단 왼쪽 위치 */
+.stage > .birds3 {
+  left: 39%;
+}
+/* 하단 오른쪽 위치 */
+.stage > .birds4 {
+  left: 49%;
+}
+/* a태그 폰트 설정 */
+.stage > .birds1 a, .stage > .birds2 a,
+.stage > .birds3 a, .stage > .birds4 a{
+  font-family: 'SDSamliphopangche_Outline';
+  position: absolute;
+  z-index: 5;
+  /* color: #83de00; */
+  color: #83de00;
+  text-shadow: 6px 6px 8px #d4ffce;
+  /* color: #d4ffce; */
+  font-size: 42px;
+  font-weight: 800;
+}
+
